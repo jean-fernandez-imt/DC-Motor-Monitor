@@ -1,2 +1,5 @@
 # Arduino Environment Variables
 Motor_Monitor/arduino_secrets.h
+
+# Arduino Editor Readme
+Motor_Monitor/ReadMe.adoc
