@@ -36,7 +36,7 @@ const int encoderA_A = 6;
 const int encoderB_A = 7;
 
 // Encoder Initial state
-unsigned long pos = 0;
+signed long pos = 0;
 
 // Set the LCD address to 0x27 for a 16x2 Display
 LiquidCrystal_I2C lcd(0x27, 16, 2);
