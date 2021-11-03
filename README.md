@@ -1,2 +1,2 @@
 # DC-Motor-Monitor
-Monitoring System for a DC Motor with Encoder. 
+This project was created during my time as a student at Code Chrysalis for Polyglotal Week.
