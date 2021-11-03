@@ -1,0 +1,18 @@
+{
+  "cpu": {
+    "fqbn": "arduino:megaavr:uno2018:mode=on",
+    "name": "Arduino Uno WiFi Rev2",
+    "type": "serial"
+  },
+  "secrets": [
+    {
+      "name": "SECRET_SSID",
+      "value": ""
+    },
+    {
+      "name": "SECRET_PASS",
+      "value": ""
+    }
+  ],
+  "included_libs": []
+}
