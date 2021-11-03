@@ -40,6 +40,7 @@ signed long pos = 0;
 
 // Set the LCD address to 0x27 for a 16x2 Display
 LiquidCrystal_I2C lcd(0x27, 16, 2);
+const int posAreaSize = 11;
 
 // WiFi Connection secret credentials
 char ssid[] = SECRET_SSID;
@@ -218,7 +219,7 @@ void loop() {
   // Print Encoder reading
   lcd.setCursor(0, 1);
   lcd.print("Pos: ");
-  lcd.print(pos);
+  printPos(pos);
 }
 
 void setMotor(int dir, int pwm) {
@@ -257,4 +258,28 @@ void printWiFiStatus() {
   Serial.print("Signal strength (RSSI): ");
   Serial.print(rssi);
   Serial.println(" dBm");
+}
+
+void printPos(signed long pos) {
+  char posChars[posAreaSize];
+
+  lcd.setCursor(5, 1);
+
+  // Reset every character to [SPACE]
+  for (int i = 0; i < posAreaSize; i++) {
+    posChars[i] = 0x20;
+  }
+
+  if (pos != 0) {
+    String posString = String(pos);
+
+    // Prepare the String char by char
+    for (int j = 0; j < posString.length(); j++) {
+      posChars[j] = posString[j];
+    }
+  } else {
+    posChars[0] = 0x30;
+  }
+  
+  lcd.print(posChars);
 }
