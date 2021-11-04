@@ -29,11 +29,7 @@ public class MotorPanel {
         // Add button listeners
         set.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-        		try {
-					requests.reqLeft();
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+        		requests.setURL(textfield.getText());
         	} 
         });
         
