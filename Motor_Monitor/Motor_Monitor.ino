@@ -107,9 +107,10 @@ void setup() {
   server.begin();
   printWiFiStatus();
 
-  // Print initial screen to LCD
+  // Print IP address to LCD
+  IPAddress ip = WiFi.localIP();
   lcd.clear();
-  lcd.print("Waiting...");
+  lcd.print(ip);
 }
 
 void loop() {
