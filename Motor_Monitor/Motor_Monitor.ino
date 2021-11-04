@@ -49,6 +49,7 @@ char pass[] = SECRET_PASS;
 // Wifi Connection
 WiFiServer server(80);
 int status = WL_IDLE_STATUS;
+IPAddress ip;
 
 void setup() {
   // Pin Initialization
@@ -108,7 +109,6 @@ void setup() {
   printWiFiStatus();
 
   // Print IP address to LCD
-  IPAddress ip = WiFi.localIP();
   lcd.clear();
   lcd.print(ip);
 }
@@ -204,7 +204,7 @@ void loop() {
 
           // LCD Output
           lcd.clear();
-          lcd.print("Stopped!");
+          lcd.print(ip);
         }
       }
     }
@@ -250,7 +250,7 @@ void printWiFiStatus() {
   Serial.println(WiFi.SSID());
 
   // Print your WiFi shield's IP address
-  IPAddress ip = WiFi.localIP();
+  ip = WiFi.localIP();
   Serial.print("IP Address: ");
   Serial.println(ip);
 
