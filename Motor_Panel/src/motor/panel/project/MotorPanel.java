@@ -18,24 +18,33 @@ public class MotorPanel {
 		/// Creating the Frame
 		JFrame frame = new JFrame("Motor Control");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(300, 125);
+		frame.setSize(325, 150);
 		
 		// Creating the panel for IP setting
         JPanel panel_ip = new JPanel();
         JLabel label = new JLabel("http://");
         JTextField textfield = new JTextField(15);
-        JButton set = new JButton("Set");
+        JButton connect = new JButton("Connect");
         
-        // Add button listeners
-        set.addActionListener(new ActionListener() {
+        // Creating the panel for Connection Status
+        JPanel panel_status = new JPanel();
+        JLabel status = new JLabel("Disconnected...");
+        
+        // Add button listener
+        connect.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
-        		requests.setURL(textfield.getText());
+        		String url = textfield.getText();
+        		
+        		requests.setURL(url);
+        		status.setText("Calling to: http://" + url);
         	} 
         });
         
         panel_ip.add(label);
         panel_ip.add(textfield);
-        panel_ip.add(set);
+        panel_ip.add(connect);
+        
+        panel_status.add(status);
         
 		// Creating the panel for Motor Control
         JPanel panel_motor = new JPanel();
@@ -80,8 +89,9 @@ public class MotorPanel {
 		
 		//Adding Components to the frame.
         frame.getContentPane().add(BorderLayout.NORTH, panel_ip);
+        frame.getContentPane().add(BorderLayout.CENTER, panel_status);
         frame.getContentPane().add(BorderLayout.SOUTH, panel_motor);
         frame.setVisible(true);
 	}
-
+	
 }
