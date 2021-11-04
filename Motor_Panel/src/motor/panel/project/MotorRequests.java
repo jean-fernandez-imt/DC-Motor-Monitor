@@ -6,7 +6,7 @@ import java.net.URL;
 
 public class MotorRequests {
 	
-	private String baseUrl = "http://192.168.0.103";
+	private String baseUrl;
 	
 	public void reqLeft() throws IOException {
 		URL url = new URL(baseUrl + "/left");
@@ -33,6 +33,10 @@ public class MotorRequests {
 		
 		int responseCode = con.getResponseCode();
 		System.out.println("GET Response Code :: " + responseCode);
+	}
+	
+	public void setURL(String url) {
+		baseUrl = "http://" + url;
 	}
 
 }
