@@ -6,6 +6,8 @@ DC motors are a common choice for a wide variety of projects due to their low co
 
 Luckily for us, lots of motors in the market now come with Encoders! These additional devices provide us with a way to know the motor's position during and after rotation. And how cool would it be to be able to control and monitor it through your reliable local network? Accordingly, today's system is made up of a DC motor with Encoder controlled by an Arduino board with a Java interface connected to Wi-Fi.
 
+![Project Preview](./img/project-preview.jpg)
+
 ## Hardware 📋
 
 Here is a list of the actual components we used for the physical part of this project. You might opt not to use exactly the same parts, so feel free to take this list as a point of reference.
