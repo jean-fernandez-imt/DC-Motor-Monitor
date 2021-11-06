@@ -66,12 +66,12 @@ The **Arduino UNO WIFI Rev2** can be powered either through the USB connection o
     1. **From Eclipse IDE:** Run the project as a *"Java Application"*.
     2. **From the Command Prompt:**
         1. Verify your *Java* version with the following command:
-          ```console
+          ```bash
           java -version
           ```
         2. If not installed, you can get it from [here](https://www.oracle.com/java/technologies/downloads/).
         3. We prepared an executable you can run from the root folder with the following commands:
-          ```console
+          ```bash
           cd JAR
           java -classpath dc.motor.monitor.jar motor.panel.project.MotorPanel
           ```
