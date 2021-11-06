@@ -77,7 +77,7 @@ If things seem to go south, you can always restart the application by pressing t
 
 - [ ]  Add connection validation functionalities.
 - [ ]  Being able to pass user-defined speed data to the server.
-- [ ]  Implement PID control to the motor.
+- [ ]  Implement PID control for the motor.
 - [ ]  Connect the motor (or motors) to a more complex device.
 
 ## Conclusions 📕
