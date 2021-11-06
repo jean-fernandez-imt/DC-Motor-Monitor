@@ -66,10 +66,15 @@ The **Arduino UNO WIFI Rev2** can be powered either through the USB connection o
     1. **From Eclipse IDE:** Run the project as a *"Java Application"*.
     2. **From the Command Prompt:**
         1. Verify your *Java* version with the following command:
-        Insert Command here
+          ```console
+          java -version
+          ```
         2. If not installed, you can get it from [here](https://www.oracle.com/java/technologies/downloads/).
-        3. We prepared an executable you can with the following commands:
-        Insert Commands here
+        3. We prepared an executable you can run from the root folder with the following commands:
+          ```console
+          cd JAR
+          java -classpath dc.motor.monitor.jar motor.panel.project.MotorPanel
+          ```
 4. Connect to your application by typing the previous IP address and clicking *"Connect"*.
 5. Test the interface's **Left**, **Right** and **Stop** buttons and check the motor's movement and position reading on the LCD Display.
 
